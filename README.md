@@ -1,6 +1,8 @@
 # Sign Language
 
-Translate an input to sign language!
+**Translate an input to sign language!**
+
+<img src="images/assignmentReact.png" alt="dynamic duo" width=50% heigh=50% />
 
 ## Installation
 
@@ -16,4 +18,4 @@ npm start
 
 ## Contributors
 
-Jonas Lindevall
+Steffen Tømmerås and Jonas Lindevall
