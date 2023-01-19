@@ -1,4 +1,4 @@
-# Joke Raterizer
+# Sign Language
 
 Translate an input to sign language!
 
@@ -13,3 +13,7 @@ npm install
 ```bash
 npm start
 ```
+
+## Contributors
+
+Jonas Lindevall
