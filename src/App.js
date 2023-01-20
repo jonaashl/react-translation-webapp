@@ -1,18 +1,18 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import StartupPage from "./Pages/StartupPage";
-import TranslationPage from "./Pages/TranslationPage";
-import ProfilePage from "./Pages/ProfilePage";
+import LoginView from "./views/LoginView";
+import TranslationView from "./views/TranslationView";
+import ProfileView from "./views/ProfileView";
 
 function App() {
     return (
         <BrowserRouter>
             <div className="app">
                 <Routes>
-                    <Route path="/" element={<StartupPage />}></Route>
-                    <Route path="/translation" element={<TranslationPage />}></Route>
-                    <Route path="/profile" element={<ProfilePage />}></Route>
-                    <Route path="*" element={<StartupPage />}></Route>
+                    <Route path="/" element={<LoginView />} />
+                    <Route path="/translation" element={<TranslationView />} />
+                    <Route path="/profile" element={<ProfileView />} />
+                    <Route path="*" element={<LoginView />} />
                 </Routes>
             </div>
         </BrowserRouter>
