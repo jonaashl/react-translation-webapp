@@ -37,10 +37,10 @@ const createUser = async (username) => {
 };
 
 export const loginUser = async (username) => {
-    const [checkError, user] = await checkForUser(username);
+    const [error, user] = await checkForUser(username);
 
-    if (checkError !== null) {
-        return [checkError, null];
+    if (error !== null) {
+        return [error, null];
     }
 
     if (user.length > 0) {

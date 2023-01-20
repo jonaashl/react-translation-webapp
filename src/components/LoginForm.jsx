@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { loginUser } from "../api/user";
+import { useUser } from "../state/UserContext";
+import { storageRead, storageSave } from "../utils/storage";
+import { useNavigate } from "react-router-dom"
 
 const usernameConfig = {
     required: true,
@@ -14,14 +17,28 @@ const LoginForm = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
+    const { user, setUser } = useUser();
+    const navigate = useNavigate();
 
     const [loading, setLoading] = useState(false);
+    const [apiError, setApiError] = useState(null);
+
+    useEffect(() => {
+        if (user !== null) {
+            navigate("profile")
+        }
+    }, [user, navigate]);
 
     const onSubmit = async ({ username }) => {
         setLoading(true);
-        const [error, user] = await loginUser(username);
-        console.log("Error: " + error);
-        console.log("User: " + user);
+        const [error, userResponse] = await loginUser(username);
+        if (error !== null) {
+            setApiError(error);
+        }
+        if (userResponse !== null) {
+            storageSave("translation-user", userResponse);
+            setUser(userResponse);
+        }
         setLoading(false);
     };
 
@@ -56,8 +73,11 @@ const LoginForm = () => {
                     {errorMessage}
                 </fieldset>
 
-                <button type="submit" disabled={loading}>Login</button>
+                <button type="submit" disabled={loading}>
+                    Login
+                </button>
                 {loading && <p>Logging in...</p>}
+                {apiError && <p>{apiError}</p>}
             </form>
         </>
     );
