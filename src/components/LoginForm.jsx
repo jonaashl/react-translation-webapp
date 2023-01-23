@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { loginUser } from "../api/user";
 import { useUser } from "../state/UserContext";
 import { storageRead, storageSave } from "../utils/storage";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 
 const usernameConfig = {
@@ -26,7 +26,7 @@ const LoginForm = () => {
 
     useEffect(() => {
         if (user !== null) {
-            navigate("profile")
+            navigate("profile");
         }
     }, [user, navigate]);
 
