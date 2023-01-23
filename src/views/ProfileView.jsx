@@ -5,8 +5,7 @@ import withAuth from "../hoc/withAuth";
 import { useUser } from "../state/UserContext";
 
 const ProfileView = () => {
-
-    const {user} = useUser();
+    const { user } = useUser();
 
     return (
         <>
@@ -15,7 +14,7 @@ const ProfileView = () => {
             <ProfileActions />
             <ProfileTranslationHistory translations={user.translations} />
         </>
-    )
+    );
 };
 
 export default withAuth(ProfileView);

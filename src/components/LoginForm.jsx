@@ -67,7 +67,7 @@ const LoginForm = () => {
                     <label htmlFor="username">Username</label>
                     <input
                         type="text"
-                        placeholder="Enter name"
+                        placeholder="Ola Nordmann"
                         maxLength={24}
                         {...register("username", usernameConfig)}
                     />
