@@ -1,20 +1,27 @@
 import { translationAdd } from "../api/translation";
 import TranslationForm from "../components/Translation/TranslationForm";
+import { STORAGE_KEY_USER } from "../const/storageKeys";
 import withAuth from "../hoc/withAuth";
 import { useUser } from "../state/UserContext";
+import { storageSave } from "../utils/storage";
 
 const TranslationView = () => {
 
-    const { user } = useUser()
+    const { user, setUser } = useUser()
 
     const handleTranslationClick = async (text) => {
         // oversette text
-        console.log(text)
         const translation = text.trim()
-        console.log(translation);
-        const [error, result] = await translationAdd(user, translation)
+        const [error, updatedUser] = await translationAdd(user, translation)
+        if (error !== null) {
+            return
+        }
+        
+        storageSave(STORAGE_KEY_USER, updatedUser)
+        setUser(updatedUser)
+
         console.log("Error", error)
-        console.log("Result", result)
+        console.log("UpdatedUser", updatedUser)
     }
 
     return (
