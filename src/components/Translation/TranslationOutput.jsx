@@ -1,14 +1,14 @@
-const TranslationOutput = () => {
-    
-    
+const TranslationOutput = letter => {
+    const imagePath = `img/${letter}.png`
+
     return (
         <>
-        <section>
-            <h4>Your translation</h4>
-        </section>
+            <aside>
+                {/* <img src={imagePath} alt={letter} width="25" /> */ }
+                {letter}
+            </aside>
         </>
     )
-
 }
 
 export default TranslationOutput

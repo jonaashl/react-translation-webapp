@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { translationClearHistory } from "../../api/translation";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { useUser } from "../../state/UserContext";
@@ -23,7 +22,7 @@ const ProfileActions = () => {
         if (clearError !== null) {
             return
         }
-        
+
         const updatedUser = {
             ...user,
             translations: []
