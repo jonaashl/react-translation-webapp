@@ -29,7 +29,7 @@ const ProfileActions = () => {
             translations: []
         }
 
-        storageSave(STORAGE_KEY_USER, user)
+        storageSave(STORAGE_KEY_USER, updatedUser)
         setUser(updatedUser)
     }
 
