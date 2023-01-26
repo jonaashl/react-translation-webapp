@@ -4,7 +4,7 @@ import { translationAdd } from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../state/UserContext"
 import { storageSave } from "../../utils/storage"
-import TranslationOutput from "./TranslationOutput"
+// import TranslationOutput from "./TranslationOutput"
 
 const translationTextConfig = {
     required: true,
@@ -30,14 +30,12 @@ const TranslationForm = () => {
     })()
 
     const translate = input => {
-        const output = input
+        return input
             .trim()
             .split("")
-            .map((letter, index) => {
-                return <TranslationOutput key={index} letter={letter} />
+            .map((letter) => {
+                return <img src={`img/${letter}.png`} alt={letter} width="70" />
             })
-        console.log("🚀 ~ file: TranslationForm.jsx:39 ~ translate ~ output", output)
-        return output
     }
 
     const onSubmit = async ({ translationText }) => {
@@ -46,10 +44,9 @@ const TranslationForm = () => {
             return
         }
 
-        setTranslationOutput([translate(translationText)])
+        setTranslationOutput(translate(translationText))
         storageSave(STORAGE_KEY_USER, updatedUser)
         setUser(updatedUser)
-        console.log("🚀 ~ file: TranslationForm.jsx:52 ~ TranslationForm ~ translationOutput", translationOutput)
 
         console.log("Error", error)
         console.log("UpdatedUser", updatedUser)
@@ -65,8 +62,8 @@ const TranslationForm = () => {
                             type="text"
                             placeholder="Hello World"
                             maxLength={40}
-                            pattern="[A-Za-z\s].{}"
-                            title="Only letters and spaces"
+                            pattern="[A-Za-z\s]+"
+                            title="Only letters (a-z) and spaces"
                             {...register("translationText", translationTextConfig)}
                         />
                         <button type="submit">Translate</button>
@@ -75,9 +72,7 @@ const TranslationForm = () => {
                 </form>
             </section>
 
-            <section id="translation-output">
-                {translationOutput}
-            </section>
+            <section id="translation-output">{translationOutput}</section>
         </>
     )
 }
