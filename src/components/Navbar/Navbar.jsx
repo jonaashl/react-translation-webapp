@@ -1,19 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { useUser } from "../../state/UserContext";
+import "../../styles/Navbar.css"
 
 const Navbar = () => {
     const { user } = useUser();
 
     return (
         <nav>
-            <h3>Global navigation</h3>
+            <h3 id="nav-h3">Lost in translation</h3>
 
             {user !== null && (
-                <ul>
-                    <li>
+                <ul id="nav-ul">
+                    <li className="nav-buttons">
                         <NavLink to="/translation">Translation</NavLink>
                     </li>
-                    <li>
+                    <li className="nav-buttons">
                         <NavLink to="/profile">Profile</NavLink>
                     </li>
                 </ul>
