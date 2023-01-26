@@ -1,4 +1,6 @@
 import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem";
+import "../../styles/ProfileTranslationHistory.css"
+
 
 const ProfileTranslationHistory = ({ translations }) => {
     const translationList = translations.map((translation, index) => (
@@ -7,7 +9,7 @@ const ProfileTranslationHistory = ({ translations }) => {
 
     return (
         <section>
-            <h4>Your translation history</h4>
+            <h4 className="historyHeader">Your translation history</h4>
 
             { translationList.length === 0 && <p>You have no translations yet</p>}
 

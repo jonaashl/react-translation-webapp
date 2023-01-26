@@ -2,6 +2,7 @@ import { translationClearHistory } from "../../api/translation";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { useUser } from "../../state/UserContext";
 import { storageDelete, storageSave } from "../../utils/storage";
+import "../../styles/ProfileActions.css"
 
 const ProfileActions = () => {
     const { user, setUser } = useUser();
@@ -33,12 +34,12 @@ const ProfileActions = () => {
     }
 
     return (
-        <ul>
+        <ul className="profileButtons">
             <li>
-                <button onClick={ handleClearHistoryClick }>Clear history</button>
+                <button id="clearHistory" onClick={ handleClearHistoryClick }>Clear history</button>
             </li>
             <li>
-                <button onClick={handleLogoutClick}>Logout</button>
+                <button id="logout" onClick={handleLogoutClick}>Logout</button>
             </li>
         </ul>
     );

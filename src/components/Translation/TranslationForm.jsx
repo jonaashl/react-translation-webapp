@@ -4,6 +4,7 @@ import { translationAdd } from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../state/UserContext"
 import { storageSave } from "../../utils/storage"
+import "../../styles/TranslationForm.css"
 // import TranslationOutput from "./TranslationOutput"
 
 const translationTextConfig = {
@@ -17,24 +18,15 @@ const TranslationForm = () => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
     } = useForm()
 
-    const errorMessage = (() => {
-        if (!errors.translationText) {
-            return null
-        }
-        if (errors.translationText.type === "required") {
-            return <span>No text submitted</span>
-        }
-    })()
 
     const translate = input => {
         return input
             .trim()
             .split("")
-            .map((letter) => {
-                return <img src={`img/${letter}.png`} alt={letter} width="70" />
+            .map((letter, index) => {
+                return <img key={index} src={`img/${letter}.png`} alt={letter} width="70" />
             })
     }
 
@@ -57,17 +49,17 @@ const TranslationForm = () => {
             <section id="translation-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <fieldset>
-                        <label htmlFor="translation-text">Translation text:</label>
-                        <input
-                            type="text"
-                            placeholder="Hello World"
-                            maxLength={40}
-                            pattern="[A-Za-z\s]+"
-                            title="Only letters (a-z) and spaces"
-                            {...register("translationText", translationTextConfig)}
-                        />
-                        <button type="submit">Translate</button>
-                        {errorMessage}
+                        <div className="input-button">
+                            <input
+                                type="text"
+                                placeholder="Hello World"
+                                maxLength={40}
+                                pattern="[A-Za-z\s]+"
+                                title="Only letters (a-z) and spaces"
+                                {...register("translationText", translationTextConfig)}
+                                />
+                            <button type="submit">Translate</button>
+                        </div>
                     </fieldset>
                 </form>
             </section>

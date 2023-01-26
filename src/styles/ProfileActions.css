@@ -1,0 +1,45 @@
+/* BURDE VI KANSKJE FLYTTE KNAPPENE UT AV EN LISTE? */
+
+.profileButtons {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#logout {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* logout button styles */
+#logout {
+    background-color: #f44336; /* red color */
+    color: white;
+    border: none;
+}
+
+#logout:hover {
+    background-color: #db4437; /* darker red color */
+    cursor: pointer;
+}
+
+/* clear history button styles */
+#clearHistory {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #4CAF50; /* green color */
+    color: white;
+    border: none;
+}
+
+#clearHistory:hover {
+    background-color: #3e8e41; /* darker green color */
+    cursor: pointer;
+}

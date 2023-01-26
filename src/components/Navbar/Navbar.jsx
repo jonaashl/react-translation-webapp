@@ -6,9 +6,10 @@ const Navbar = () => {
     const { user } = useUser();
 
     return (
-        <nav>
+        <>
+        <nav className="nav">
             <h3 id="nav-h3">Lost in translation</h3>
-
+            <img src="img/assignmentReact.png" alt="reactHydra" />
             {user !== null && (
                 <ul id="nav-ul">
                     <li className="nav-buttons">
@@ -20,6 +21,7 @@ const Navbar = () => {
                 </ul>
             )}
         </nav>
+        </>
     );
 };
 

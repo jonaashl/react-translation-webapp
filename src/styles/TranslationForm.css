@@ -1,0 +1,48 @@
+fieldset {
+    border: none;
+    border-bottom: solid;
+}
+
+fieldset input[type="text"] {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 50px; 
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: solid;
+}
+
+
+/* TRANSLATION TEXT ABOVE INPUT FIELD */
+fieldset label {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 20px;
+
+}
+
+.input-button {
+    display: flex;
+}
+
+.input-button input{
+    float: left;
+}
+
+.input-button button{
+    float: right;
+}
+
+
+fieldset button[type="submit"] {
+    width: 10%;
+    height: 60px;
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+}

@@ -9,18 +9,45 @@ nav {
     border-radius: 0px 0px 10px 10px;
   }
 
-#nav-ul {
-    display: flex;
-    gap: 1em;
-    font-size: 20px;
-    list-style-type: none;
-
+nav h3, nav img {
+    float: left;
 }
 
-.nav-buttons {
-    font-size: 25px;
-}
-
-#nav-h3 {
+nav h3 {
     font-size: 35px;
 }
+
+nav img {
+    float: left;
+}
+
+img {
+    width: 100px;
+    border-radius: 30px;
+
+}
+
+nav ul {
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.nav-buttons a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.nav-buttons a:hover{
+    color: black;
+    transform: scale(1,2);
+}
+
