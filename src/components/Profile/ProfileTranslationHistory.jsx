@@ -11,7 +11,7 @@ const ProfileTranslationHistory = ({ translations }) => {
 
             { translationList.length === 0 && <p>You have no translations yet</p>}
 
-            <ul>{translationList}</ul>
+            <ul>{translationList.slice(-10).reverse()}</ul>
         </section>
     );
 };
