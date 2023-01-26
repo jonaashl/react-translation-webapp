@@ -1,63 +1,63 @@
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { loginUser } from "../../api/user";
-import { useUser } from "../../state/UserContext";
-import { storageSave } from "../../utils/storage";
-import { useNavigate } from "react-router-dom";
-import { STORAGE_KEY_USER } from "../../const/storageKeys";
+import { useEffect, useState } from "react"
+import { useForm } from "react-hook-form"
+import { loginUser } from "../../api/user"
+import { useUser } from "../../state/UserContext"
+import { storageSave } from "../../utils/storage"
+import { useNavigate } from "react-router-dom"
+import { STORAGE_KEY_USER } from "../../const/storageKeys"
 
 const usernameConfig = {
     required: true,
     minLength: 3,
     maxLength: 23,
-};
+}
 
 const LoginForm = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
-    const { user, setUser } = useUser();
-    const navigate = useNavigate();
+    } = useForm()
+    const { user, setUser } = useUser()
+    const navigate = useNavigate()
 
-    const [loading, setLoading] = useState(false);
-    const [apiError, setApiError] = useState(null);
+    const [loading, setLoading] = useState(false)
+    const [apiError, setApiError] = useState(null)
 
     useEffect(() => {
         if (user !== null) {
-            navigate("profile");
+            navigate("profile")
         }
-    }, [user, navigate]);
+    }, [user, navigate])
 
     const onSubmit = async ({ username }) => {
-        setLoading(true);
-        const [error, userResponse] = await loginUser(username);
+        setLoading(true)
+        const [error, userResponse] = await loginUser(username)
         if (error !== null) {
-            setApiError(error);
+            setApiError(error)
         }
         if (userResponse !== null) {
-            storageSave(STORAGE_KEY_USER, userResponse);
-            setUser(userResponse);
+            storageSave(STORAGE_KEY_USER, userResponse)
+            setUser(userResponse)
         }
-        setLoading(false);
-    };
+        setLoading(false)
+    }
 
     const errorMessage = (() => {
         if (!errors.username) {
-            return null;
+            return null
         }
 
         if (errors.username.type === "required") {
-            return <span>Username is required</span>;
+            return <span>Username is required</span>
         }
         if (errors.username.type === "minLength") {
-            return <span>Username is too short (min 3)</span>;
+            return <span>Username is too short (min 3)</span>
         }
         if (errors.username && errors.username.type === "maxLength") {
-            return <span>Max length reached (max 24)</span>;
+            return <span>Max length reached (max 24)</span>
         }
-    })();
+    })()
 
     return (
         <>
@@ -71,17 +71,17 @@ const LoginForm = () => {
                         maxLength={24}
                         {...register("username", usernameConfig)}
                     />
+                    <button type="submit" disabled={loading}>
+                        Login
+                    </button>
                     {errorMessage}
                 </fieldset>
 
-                <button type="submit" disabled={loading}>
-                    Login
-                </button>
                 {loading && <p>Logging in...</p>}
                 {apiError && <p>{apiError}</p>}
             </form>
         </>
-    );
-};
+    )
+}
 
-export default LoginForm;
+export default LoginForm
