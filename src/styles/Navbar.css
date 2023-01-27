@@ -4,7 +4,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: teal;
+    background-color:cornflowerblue;
     color: #fff;
     border-radius: 0px 0px 10px 10px;
 }
@@ -16,10 +16,6 @@ nav img {
 
 nav h3 {
     font-size: 35px;
-}
-
-nav img {
-    float: left;
 }
 
 img {

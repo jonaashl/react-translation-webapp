@@ -6,30 +6,25 @@
 
 .profileButtons {
     display: flex;
-    justify-content: end;
-    
+    justify-content: flex-end;
 }
 
 #logout {
     padding: 10px 20px;
-    border-radius: 4px;
     margin: 10px;
+    border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.2s ease-in-out;
-}
-
-/* logout button styles */
-#logout {
-    background-color: #f44336; /* red color */
+    background-color: #f44336;
     color: white;
     border: none;
 }
 
 #logout:hover {
-    background-color: #db4437; /* darker red color */
+    background-color: #c43124;
     cursor: pointer;
 }
 
@@ -40,12 +35,13 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
-    background-color: #4caf50; /* green color */
+    background-color: #4caf50;
+    transition: background-color 0.2s ease-in-out;
     color: white;
     border: none;
 }
 
 #clearHistory:hover {
-    background-color: #3e8e41; /* darker green color */
+    background-color: #3e8e41;
     cursor: pointer;
 }
