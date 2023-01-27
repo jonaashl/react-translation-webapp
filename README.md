@@ -1,21 +1,32 @@
-# Sign Language
+<h1>Lost in Translation</h1>
+<p></p>
 
-**Translate an input to sign language!**
+> Webpage for translating an input to sign language, developed in React.
 
 <img src="/public/img/assignmentReact.png" alt="dynamic duo" width=30% heigh=30% />
 
-## Installation
+### 🏠 [Gitlab Homepage](https://gitlab.com/stommeras/front-end-assignment-2/)
 
-```bash
+### ✨ [Demo](URLHERE)
+
+## Install
+
+```sh
 npm install
 ```
 
 ## Usage
 
-```bash
+```sh
 npm start
 ```
 
-## Contributors
+## Authors
 
-Steffen Tømmerås and Jonas Lindevall
+👤 **Jonas Lindevall**
+
+-   Gitlab: [@jonashl](https://github.com/jonashl)
+
+👤 **Steffen Tømmerås**
+
+-   Gitlab: [@stommeras](https://github.com/stommeras)
