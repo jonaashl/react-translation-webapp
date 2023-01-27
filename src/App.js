@@ -1,9 +1,9 @@
-import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginView from "./views/LoginView";
-import TranslationView from "./views/TranslationView";
-import ProfileView from "./views/ProfileView";
-import Navbar from "./components/Navbar/Navbar";
+import "./App.css"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import LoginView from "./views/LoginView"
+import TranslationView from "./views/TranslationView"
+import ProfileView from "./views/ProfileView"
+import Navbar from "./components/Navbar/Navbar"
 
 function App() {
     return (
@@ -18,7 +18,7 @@ function App() {
                 </Routes>
             </div>
         </BrowserRouter>
-    );
+    )
 }
 
-export default App;
+export default App

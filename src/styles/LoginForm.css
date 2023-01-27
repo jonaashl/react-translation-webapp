@@ -1,5 +1,4 @@
 .loginError {
-
 }
 
 .loginBtn {
@@ -10,7 +9,7 @@
     background-color: rgb(17, 153, 17);
 }
 
-.inputFormButton{
+.inputFormButton {
     display: flex;
     align-items: center;
 }

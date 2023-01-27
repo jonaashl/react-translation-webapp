@@ -8,8 +8,8 @@ export const translationAdd = async (user, translation) => {
             method: "PATCH",
             headers: createHeaders(),
             body: JSON.stringify({
-                translations: [...user.translations, translation]
-            })
+                translations: [...user.translations, translation],
+            }),
         })
         if (!response.ok) {
             throw new Error("Could not update the translation")
@@ -17,21 +17,19 @@ export const translationAdd = async (user, translation) => {
 
         const result = await response.json()
         return [null, result]
-    }
-    catch (error) {
+    } catch (error) {
         return [error.message, null]
     }
 }
 
-
-export const translationClearHistory = async (userId) => {
+export const translationClearHistory = async userId => {
     try {
         const response = await fetch(`${apiUrl}/${userId}`, {
             method: "PATCH",
             headers: createHeaders(),
             body: JSON.stringify({
-                translations: []
-            })
+                translations: [],
+            }),
         })
         if (!response.ok) {
             throw new Error("Could not update the translation")
@@ -39,8 +37,7 @@ export const translationClearHistory = async (userId) => {
 
         const result = await response.json()
         return [null, result]
-    }
-    catch (error) {
+    } catch (error) {
         return [error.message, null]
     }
 }

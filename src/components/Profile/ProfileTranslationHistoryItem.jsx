@@ -1,7 +1,7 @@
 import "../../styles/ProfileTranslationHistoryItem.css"
 
 const ProfileTranslationHistoryItem = ({ translation }) => {
-    return <li id="wordList">{translation}</li>;
-};
+    return <li id="wordList">{translation}</li>
+}
 
-export default ProfileTranslationHistoryItem;
+export default ProfileTranslationHistoryItem

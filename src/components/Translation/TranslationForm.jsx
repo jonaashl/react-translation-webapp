@@ -15,11 +15,7 @@ const TranslationForm = () => {
     const { user, setUser } = useUser()
     const [translationOutput, setTranslationOutput] = useState([])
 
-    const {
-        register,
-        handleSubmit,
-    } = useForm()
-
+    const { register, handleSubmit } = useForm()
 
     const translate = input => {
         return input
@@ -49,7 +45,7 @@ const TranslationForm = () => {
             <section id="translation-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <fieldset>
-                    <label htmlFor="translation-form">Input text to translate</label>
+                        <label htmlFor="translation-form">Input text to translate</label>
                         <div className="input-button">
                             <input
                                 type="text"

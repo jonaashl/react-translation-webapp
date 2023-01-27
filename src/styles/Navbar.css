@@ -7,9 +7,10 @@ nav {
     background-color: teal;
     color: #fff;
     border-radius: 0px 0px 10px 10px;
-  }
+}
 
-nav h3, nav img {
+nav h3,
+nav img {
     float: left;
 }
 
@@ -24,7 +25,6 @@ nav img {
 img {
     width: 100px;
     border-radius: 30px;
-
 }
 
 nav ul {
@@ -38,16 +38,14 @@ nav li {
     padding-right: 20px;
 }
 
-.nav-buttons a{
+.nav-buttons a {
     color: white;
     font-size: 25px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
-
 }
 
-.nav-buttons a:hover{
+.nav-buttons a:hover {
     color: black;
-    transform: scale(1,2);
+    transform: scale(1, 2);
 }
-

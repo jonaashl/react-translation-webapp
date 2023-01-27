@@ -6,20 +6,20 @@ const validateKey = key => {
 
 export const storageSave = (key, value) => {
     validateKey(key)
-    localStorage.setItem(key, JSON.stringify(value));
-};
+    localStorage.setItem(key, JSON.stringify(value))
+}
 
 export const storageRead = key => {
     validateKey(key)
-    const data = localStorage.getItem(key);
+    const data = localStorage.getItem(key)
     if (data) {
-        return JSON.parse(data);
+        return JSON.parse(data)
     }
 
-    return null;
-};
+    return null
+}
 
 export const storageDelete = key => {
     validateKey(key)
-    localStorage.removeItem(key);
-};
+    localStorage.removeItem(key)
+}
