@@ -1,6 +1,3 @@
-.profileTranslation {
-    margin-left: 10px;
-}
 
 .historyHeader {
     border-bottom: solid;
@@ -9,6 +6,8 @@
 
 .profileButtons {
     display: flex;
+    justify-content: end;
+    
 }
 
 #logout {

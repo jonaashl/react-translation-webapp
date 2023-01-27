@@ -24,8 +24,12 @@ const ProfileView = () => {
     return (
         <>
             <ProfileHeader username={user.username} />
+            <section>
             <ProfileTranslationHistory translations={user.translations} />
+            </section>
+            <section>
             <ProfileActions />
+            </section>
         </>
     )
 }
