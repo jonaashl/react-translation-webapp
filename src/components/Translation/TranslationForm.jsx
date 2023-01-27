@@ -49,6 +49,7 @@ const TranslationForm = () => {
             <section id="translation-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <fieldset>
+                    <label htmlFor="translation-form">Input text to translate</label>
                         <div className="input-button">
                             <input
                                 type="text"
@@ -57,7 +58,7 @@ const TranslationForm = () => {
                                 pattern="[A-Za-z\s]+"
                                 title="Only letters (a-z) and spaces"
                                 {...register("translationText", translationTextConfig)}
-                                />
+                            />
                             <button type="submit">Translate</button>
                         </div>
                     </fieldset>

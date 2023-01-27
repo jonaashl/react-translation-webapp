@@ -5,6 +5,8 @@ import { useUser } from "../../state/UserContext"
 import { storageSave } from "../../utils/storage"
 import { useNavigate } from "react-router-dom"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
+import "../../styles/LoginForm.css"
+
 
 const usernameConfig = {
     required: true,
@@ -61,20 +63,24 @@ const LoginForm = () => {
 
     return (
         <>
-            <h2>Enter name:</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <fieldset>
-                    <label htmlFor="username">Username</label>
-                    <input
-                        type="text"
-                        placeholder="Ola Nordmann"
-                        maxLength={24}
-                        {...register("username", usernameConfig)}
-                    />
-                    <button type="submit" disabled={loading}>
-                        Login
-                    </button>
+                    <label htmlFor="username">Enter your name</label>
+                    <div className="inputFormButton">
+
+                        <input
+                            type="text"
+                            placeholder="Ola Nordmann"
+                            maxLength={24}
+                            {...register("username", usernameConfig)}
+                            />
+                        <button className="loginBtn" type="submit" disabled={loading}>
+                            Login
+                        </button>
+                    </div>
+                    <span className="loginError">
                     {errorMessage}
+                    </span>
                 </fieldset>
 
                 {loading && <p>Logging in...</p>}

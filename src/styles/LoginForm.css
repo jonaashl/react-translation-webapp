@@ -1,0 +1,16 @@
+.loginError {
+
+}
+
+.loginBtn {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.loginBtn:hover {
+    background-color: rgb(17, 153, 17);
+}
+
+.inputFormButton{
+    display: flex;
+    align-items: center;
+}

@@ -1,3 +1,7 @@
+#translation-form {
+    margin-top: 30px;
+}
+
 fieldset {
     border: none;
     border-bottom: solid;
@@ -18,8 +22,7 @@ fieldset input[type="text"] {
 /* TRANSLATION TEXT ABOVE INPUT FIELD */
 fieldset label {
     display: block;
-    margin: 0 auto;
-    width: 50%;
+    margin-left: 20%;
     font-size: 20px;
 
 }
@@ -29,18 +32,23 @@ fieldset label {
 }
 
 .input-button input{
-    float: left;
+    display: inline-block;
 }
 
 .input-button button{
-    float: right;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out;
+
 }
 
+.input-button button:hover {
+    background-color: rgb(17, 153, 17);
+}
 
 fieldset button[type="submit"] {
     width: 10%;
     height: 60px;
-    background-color: gray;
+    background-color: limegreen;
     color: white;
     font-size: 18px;
     border-radius: 25px;

@@ -34,14 +34,14 @@ const ProfileActions = () => {
     }
 
     return (
-        <ul className="profileButtons">
-            <li>
+        <div className="profileButtons">
+            <div>
                 <button id="clearHistory" onClick={ handleClearHistoryClick }>Clear history</button>
-            </li>
-            <li>
+            </div>
+            <div>
                 <button id="logout" onClick={handleLogoutClick}>Logout</button>
-            </li>
-        </ul>
+            </div>
+        </div>
     );
 };
 

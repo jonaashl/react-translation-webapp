@@ -1,14 +1,20 @@
-/* BURDE VI KANSKJE FLYTTE KNAPPENE UT AV EN LISTE? */
+.profileTranslation {
+    margin-left: 10px;
+}
+
+.historyHeader {
+    border-bottom: solid;
+    margin-left: 10px;
+}
 
 .profileButtons {
-    list-style-type: none;
     display: flex;
-    justify-content: space-evenly;
 }
 
 #logout {
     padding: 10px 20px;
     border-radius: 4px;
+    margin: 10px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -31,6 +37,7 @@
 /* clear history button styles */
 #clearHistory {
     padding: 10px 20px;
+    margin: 10px;
     border-radius: 4px;
     font-size: 14px;
     font-weight: 600;

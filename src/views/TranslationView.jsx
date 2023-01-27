@@ -4,7 +4,6 @@ import withAuth from "../hoc/withAuth"
 const TranslationView = () => {
     return (
         <>
-            <h1>Translation Page</h1>
             <section id="translation-text">
                 <TranslationForm />
             </section>
