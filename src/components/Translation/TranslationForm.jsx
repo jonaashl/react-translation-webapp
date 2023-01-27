@@ -19,6 +19,7 @@ const TranslationForm = () => {
     const translate = input => {
         return input
             .trim()
+            .toLowerCase()
             .split("")
             .map((letter, index) => {
                 if (letter === " ") {
@@ -37,9 +38,6 @@ const TranslationForm = () => {
         setTranslationOutput(translate(translationText))
         storageSave(STORAGE_KEY_USER, updatedUser)
         setUser(updatedUser)
-
-        console.log("Error", error)
-        console.log("UpdatedUser", updatedUser)
     }
 
     return (
