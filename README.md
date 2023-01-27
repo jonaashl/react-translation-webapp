@@ -2,7 +2,7 @@
 
 **Translate an input to sign language!**
 
-<img src="images/assignmentReact.png" alt="dynamic duo" width=50% heigh=50% />
+<img src="/public/img/assignmentReact.png" alt="dynamic duo" width=30% heigh=30% />
 
 ## Installation
 
