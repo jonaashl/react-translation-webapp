@@ -8,8 +8,8 @@ const Navbar = () => {
     return (
         <>
             <nav className="nav">
-                <h3 id="nav-h3">Lost in translation</h3>
-                <img src="img/assignmentReact.png" alt="reactHydra" />
+                <h3 id="nav-h3">Lost in Translation</h3>
+                <img className="app-logo" src="img/assignmentReact.png" alt="reactHydra" />
                 {user !== null && (
                     <ul id="nav-ul">
                         <li className="nav-buttons">

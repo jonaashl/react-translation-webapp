@@ -5,7 +5,6 @@ import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../state/UserContext"
 import { storageSave } from "../../utils/storage"
 import "../../styles/TranslationForm.css"
-// import TranslationOutput from "./TranslationOutput"
 
 const translationTextConfig = {
     required: true,
@@ -22,6 +21,9 @@ const TranslationForm = () => {
             .trim()
             .split("")
             .map((letter, index) => {
+                if (letter === " ") {
+                    return <br />
+                }
                 return <img key={index} src={`img/${letter}.png`} alt={letter} width="70" />
             })
     }
