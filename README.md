@@ -7,7 +7,7 @@
 
 ### 🏠 [Gitlab Homepage](https://gitlab.com/stommeras/front-end-assignment-2/)
 
-### ✨ [Demo](URLHERE)
+### ✨ [Demo Page](https://jlst-lost-in-translation.vercel.app/)
 
 ## Install
 
